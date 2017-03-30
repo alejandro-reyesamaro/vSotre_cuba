@@ -1,0 +1,94 @@
+﻿body 
+{
+	
+}
+.container
+{
+    text-align:left;
+    border: solid 2px #d4d4d4;    
+    width: 260px;
+    height:204px;
+}
+.row_container
+{
+    position:relative;
+    padding-bottom: 5px;
+    display:block;	    
+}
+.foto
+{        
+    padding: 10px;    
+    float:left;
+    width: 92px;
+}
+.left
+{	
+	margin: 0 0 0 132px;    
+    text-align:left;      
+}
+.nombre_producto
+{
+    padding: 7px 7px 3px 0;
+    display:block;
+    font-weight: bold;
+}
+.nombre_producto a
+{
+    font-size:7pt;
+}
+.marca_producto
+{
+    font-family: Verdana;
+    font-weight:bold;
+    font-size:9pt;
+    padding-bottom: 10px;
+}
+.descripcion_producto
+{	
+    font-family: Verdana;
+    text-align:left;
+    font-size: 7pt;	
+    padding: 5px 7px 5px 0;
+}
+.precio_producto
+{
+	font-family: Verdana;
+    font-weight:bold;
+    font-size:10pt;
+	padding: 6px 5px 15px 0;
+}
+.row_container2
+{    
+	clear:both;
+    padding: 10px 10px 10px 5px;
+    display:block;	
+}
+.cantidad_prod
+{		
+	float:left;	
+	font-family:Verdana;
+	font-weight: bold;
+	font-size: 9pt;
+	background-color: #CDE85D;
+	min-height: 14px;	
+	padding: 4px 0 4px 0;
+	margin: 0 4px 0 4px;
+	width: 112px;
+	color:White;
+	text-align: center;
+}    
+.add2kart
+{
+	float:right;
+	padding: 0 0 0 10px;
+}
+.raya_producto
+{
+	height:10px;
+	width:118px;
+	background-position:center;
+	text-align:left;	
+	background-image:url(Img/017.jpg);
+	background-repeat:repeat-x;	
+	margin-right: 7px;
+}

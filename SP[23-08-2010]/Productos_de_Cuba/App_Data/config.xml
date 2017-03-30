@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<xml>
+  <smtp_server value="2">
+    <server_name>mail.matcom.uh.cu</server_name>
+    <server_address>mail.matcom.uh.cu</server_address>
+    <mail_address>noreply@matcom.uh.cu</mail_address>
+  </smtp_server>
+  <membership>
+    <user_name>noreply</user_name>
+    <password>12345</password>
+  </membership>
+  <admin>abarreiro@matcom.uh.cu</admin>
+  <SSL>0</SSL>
+  <port>3128</port>
+</xml>

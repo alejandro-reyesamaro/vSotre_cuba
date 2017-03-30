@@ -1,0 +1,21 @@
+﻿body {
+}
+.row_ofertas
+{	
+	margin: 0 auto;
+	width:auto;	
+	padding-bottom: 20px;	
+}
+.oferta_left
+{		
+	float:left;
+	padding-left: 15px;
+	padding-top: 15px;
+	
+}
+.oferta_rigth
+{	
+	padding-right: 15px;
+	padding-top: 15px;
+	float:right;
+}

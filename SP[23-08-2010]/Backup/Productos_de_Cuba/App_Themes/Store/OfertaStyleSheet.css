@@ -1,0 +1,58 @@
+﻿body {
+}
+.container_oferta
+{	
+	padding: 0 20px 5px 46px;
+}
+.foto_oferta
+{		
+	text-align:left;
+	width: 158px;
+	height: 114px;
+}
+.nombre_oferta
+{
+	padding-top:10px;
+	font-family: Verdana;
+	text-align:left;
+	font-size: 9pt;	
+	font-weight:bold;
+}
+.raya
+{
+	height:10px;
+	background-position:center;
+	text-align:left;
+	background-image:url(Img/017.jpg);
+	background-repeat:repeat-x;	
+}
+.descripcion_oferta
+{	
+	font-family: Verdana;
+	text-align:left;
+	font-size: 7pt;	
+}
+.precio_oferta
+{
+	padding-top:10px;
+	font-family: Verdana;
+	text-align:left;
+}
+.precio
+{
+	text-align:left;
+}
+.span_precio
+{
+	text-align:left;
+	font-family: Verdana;
+	background-color: #9ebf2f;	
+	font-weight:bold;
+	color:White;	
+	font-size:16pt;
+	vertical-align:top;
+	position:relative;
+	padding-left:2px;
+	padding-bottom:2px;
+}
+

@@ -1,0 +1,61 @@
+﻿body 
+{
+    background-color: White;
+    margin: 0 auto;
+	width: 500px;
+}
+a
+{
+	font-family:Verdana;
+	color: #707070;
+	font-size: 10pt;
+	text-decoration: none;		
+}
+a:hover
+{
+	font-family:Verdana;
+	color: Black;
+	font-size: 10pt;
+	text-decoration: none;		
+}
+.login
+{	
+	font-family: Verdana;
+	font-size: 8pt;
+}
+.links_separados
+{
+	padding-right: 6px;
+}
+.login_logo
+{
+    float: left;
+}
+.login_actions
+{
+    padding-left: 296px;
+}
+.login_control
+{
+    float: right;
+    padding-top: 45px;
+}
+.login_register_login a
+{
+    vertical-align:middle;
+	font-size: 8pt;    
+}
+.login_container
+{
+}
+
+#centrado
+{
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -250px;
+}

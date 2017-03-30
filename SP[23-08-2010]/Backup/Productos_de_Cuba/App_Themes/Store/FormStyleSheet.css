@@ -1,0 +1,39 @@
+﻿.container_form{}
+.row
+{
+	padding: 10px 10px 1px 10px;
+	font-family: Verdana;
+	font-size: 10pt;	
+}
+
+.column_left_form
+{
+	position:relative;
+	width: 30%;
+	display: inline;
+	float: left;
+	text-align:right;
+	padding-right: 5px;
+}
+.column_rigth_form
+{
+	position:relative;
+	width:70%;
+	display: inline;
+	text-align:left;
+	padding-left: 5px;
+	top: 0px;
+	left: 0px;
+}
+.large_control
+{
+	border: solid 1px #dadada;
+	width: 200px;
+}
+.extralarge_control
+{
+	border: solid 1px #dadada;
+	width: 300px;
+	height: 80px;	
+}
+

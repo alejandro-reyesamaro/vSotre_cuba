@@ -1,0 +1,117 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<%@ Register src="User_Controls/Oferta.ascx" tagname="Oferta" tagprefix="uc1" %>
+
+<%@ Register src="User_Controls/Carrito.ascx" tagname="Carrito" tagprefix="uc2" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Master Page</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="App_Themes/MasterPage/MasterPageStyleSheet.css" rel="stylesheet" type="text/css" />    
+    <link href="App_Themes/Store/OfertaStyleSheet.css" rel="stylesheet" type="text/css" />    
+    <link href="App_Themes/Store/ProductStyleSheet.css" rel="stylesheet" type="text/css" />        
+    <link href="App_Themes/Store/KartStyleSheet.css" rel="stylesheet" type="text/css" /> 
+    <link href="App_Themes/Store/ListProductStyleSheet.css" rel="stylesheet" type="text/css" />        
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="margin: 0 auto; text-align: center">
+        <asp:ScriptManager ID="ScriptManager1" runat="server" />
+        <div id="Container">
+            <div class="banner">
+                <div class="logo">
+                    <asp:Image runat="server" ImageUrl="~/App_Themes/MasterPage/Img/logo.gif" CssClass="logo_img"/>               
+                </div>
+                <div class="banner_rigth">                                  
+                    <div class="login_register">                    
+                        <span class="links_separados">
+                            <asp:LinkButton ID="LBLogin" runat="server" Text="Entrar" OnClick="login_OnClick"></asp:LinkButton>
+                        </span>
+                        <span class="links_separados">
+                            <asp:Image runat="server" ImageUrl="~/App_Themes/MasterPage/Img/013.jpg" />
+                        </span>
+                        <asp:LinkButton ID="LBRegister" runat="server" Text="Registrarse" OnClick="register_OnClick"></asp:LinkButton>
+                    </div>
+                    
+                    <div class="buscar">
+                        <div class="box_buscar">
+                            <asp:TextBox ID="TBBuscar" runat="server" CssClass="tb_buscar"></asp:TextBox>
+                        </div>
+                        <div class="img_buscar">
+                            <asp:ImageButton ID="IBBuscar" runat="server" 
+                                ImageUrl="~/App_Themes/MasterPage/Img/010.gif" OnClick="buscar_OnClick" 
+                                style="height: 19px" />
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+            
+            <div class="top_menu">
+                <span class="menu_link" style="padding-right:20px"><asp:LinkButton ID="LBHome" runat="server" Text="Inicio" OnClick="menu_OnClick" CommandName="Default"></asp:LinkButton></span>
+                <span class="menu_link" style="padding-right:20px"><asp:LinkButton ID="LBProductos" runat="server" Text="Productos" OnClick="menu_OnClick" CommandName="Productos"></asp:LinkButton></span>
+                <span class="menu_link" style="padding-right:20px"><asp:LinkButton ID="LBKart" runat="server" Text="Carro de compras" OnClick="menu_OnClick" CommandName="ShoppingCart"></asp:LinkButton></span>
+                <span class="menu_link" style="padding-right:20px"><asp:LinkButton ID="LBOrdenes" runat="server" Text="Ordenes" OnClick="menu_OnClick" CommandName="Cliente/Visor_Ordenes"></asp:LinkButton></span>
+                <span class="menu_link" style="padding-right:20px"><asp:LinkButton ID="LBCrearadmin" runat="server" Text="Crear Administrador" OnClick="menu_OnClick" CommandName="Cliente/Administrador/Crear_Admin"></asp:LinkButton></span>
+                <span class="menu_link" style="padding-right:20px"><asp:LinkButton ID="LBCategorias" runat="server" Text="Categorías" OnClick="menu_OnClick" CommandName="Cliente/Administrador/Categorias"></asp:LinkButton></span>
+                <span class="menu_link" style="padding-right:20px"><asp:LinkButton ID="LBContact" runat="server" Text="Contáctenos" CommandName="Contactenos" ></asp:LinkButton></span>
+            </div>
+            <div class="bottom_body">
+                <div class="column_left">               
+                    <div class="header_category"></div>
+                    <div class="category">
+                        <asp:GridView ID="GVCategorias" runat="server" AutoGenerateColumns="False"
+                                        BorderWidth="0px" GridLines="None" DataSourceID="CategoriasObjectDataSource"
+                                        OnDataBound="GridView_DataBound" 
+                                        OnRowDataBound="GridView_RowDataBound" PageSize="80" 
+                                        Width="193px" ShowHeader="False">                                        
+                            <Columns>                                
+                                <asp:TemplateField>
+                                    <ItemStyle HorizontalAlign="Left" Height="30px" CssClass="bullet"/>
+                                    <ItemTemplate>
+                                        <asp:LinkButton ID="LBCategoria" runat="server" OnClick="CategoriasLink_Click">Categoria</asp:LinkButton>
+                                    </ItemTemplate>
+                                </asp:TemplateField>
+                            </Columns>
+                        </asp:GridView>
+                        
+                        <asp:ObjectDataSource ID="CategoriasObjectDataSource" runat="server" SelectMethod="ObjectDataSourceAll"
+                                              TypeName="BLLayer.Categoria">                                              
+                        </asp:ObjectDataSource>
+
+                    </div>
+                </div>                             
+                <div class="column_rigth">
+                    <div class="header_ofert"></div>
+                    <div class="ofert">
+                        <uc1:Oferta ID="oferta" runat="server"/>
+                    </div>
+                    <div class="head_carrito">
+                    </div>
+                    <div class="carrito">
+                        <uc2:Carrito ID="Carrito" runat="server" />
+                    </div>
+                </div>
+                
+                <div class="column_center">
+                    <div class="header_center"></div>
+                    <div class="place_holder">
+                        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>              
+                </div>  
+                <div class="clear">
+                    © Copyrigth  Productosdecuba.com
+                </div>
+                
+            </div>
+            
+        </div>        
+    </div>
+    </form>
+</body>
+</html>

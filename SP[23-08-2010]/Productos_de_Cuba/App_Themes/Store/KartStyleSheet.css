@@ -1,0 +1,55 @@
+﻿body {
+}
+.kart_container
+{	
+	width: 224px;
+	text-align:left;
+	padding-bottom: 30px;	
+}
+.kart_rowdata
+{
+	width: auto;
+	padding-bottom:4px;
+}
+.kart_cellleft_data
+{	
+	font-family:Verdana;
+	font-size:8pt;
+	width:130px;
+	float:left;
+	padding: 3px 10px 0 0;
+	text-align:right;	
+}
+.kart_cellrigth_data
+{	
+	/*width:84px;*/
+	margin: 0 0 0 130px;	
+}
+.kart_control
+{
+	font-family:Verdana;	
+	font-size:7pt;
+	color:Black;
+	font-weight:bold;
+	width: 50px;
+	border:solid 1px #dadada;
+	background-color:White;
+	text-align:left;
+	padding-left:2px;
+}
+.kart_rowaction
+{
+	width:auto;
+	padding-top:10px;
+}
+.kart_cellleft_action
+{	
+	width:95px;	
+	float:left;
+	height: 20px;
+	margin-left:65px;
+}
+.kart_cellrigth_action
+{		
+	margin: 0 0 0 95px;
+}
